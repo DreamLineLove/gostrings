@@ -52,5 +52,33 @@ func stringsPkg() {
 	// Returns length of string
 	str3_length := len(str3)
 	fmt.Println("Length:", str3_length)
+	WriteSpace(2)
 
+	hello := "Hello"
+	fmt.Println(hello)
+	space := " "
+	world := "World"
+	fmt.Println(world)
+	slice := []string{
+		hello,
+		space,
+		world,
+	}
+	fmt.Println(slice)
+	WriteSpace(1)
+
+	hello_world_string := strings.Join(slice, "")
+	fmt.Println("After using join:", hello_world_string)
+	WriteSpace(2)
+
+	var str4 string = "Yangon is the capital of Burma. It is teeming with people!"
+	str5 := strings.Replace(str4, "is", "was", 1)
+	str6 := strings.Replace(str5, "Burma", "Myanmar", 1)
+	fmt.Println(str4)
+	fmt.Println(str5)
+	fmt.Println(str6)
+
+	// I should make a command line quiz of some sort to test myself on content contained.
+	// use make use of flags
+	// should implement in the other repo as well
 }
