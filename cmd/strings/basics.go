@@ -1,28 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func basicsLEGACY() {
+func basics() {
 
-	// This is a raw literal.
-	fmt.Println(`This should print "Hello World"`)
+	// Raw literal strings
+	raw := `This is a "raw" literal string.\n`
+	fmt.Println(raw)
 
-	// Printing everything including escape characters.
-	fmt.Println(`The tab characters\tare also printed!\t`)
+	// Interpreted literal strings
+	interpreted := "\nThis is on a new line!"
+	fmt.Println(interpreted)
 
-	// Multi-line strings without hackery
-	multiLineLiteral :=
-		`This should be
-	on separate lines. Maybe it is. 
-	Maybe it isn't!`
-	fmt.Println(multiLineLiteral)
-
-	// This is an interpreted literal.
-	// Can be formatted and recognize escape characters.
-	fmt.Println("\nthis\tis\tformatted!")
-
-	// Concatenating strings in go.
+	// Concatenate strings
 	hello := "Hello"
-	world := ` World`
-	fmt.Println(hello + world)
+	world := "World"
+	space := " "
+	newline := "\n"
+	// Print does not automatically add spaces between string operands.
+	fmt.Print(hello + space + world + newline)
+	// It only does so for non-string operands. Like this...
+	fmt.Print(1, 2, 3, 4, " ...\n")
 }
