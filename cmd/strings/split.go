@@ -5,8 +5,7 @@ import (
 	"strings"
 )
 
-func explore() {
-
+func split() {
 	longText := "Ich habe am Morgen einen Deutschkurs. Ich lerne Deutsch weil Deutsch sehr wichtig fur mein Studium ist. Ich mochte in Deutschland studieren."
 
 	splitSlice := strings.Split(longText, ".")
@@ -69,4 +68,46 @@ func explore() {
 	trimmedText := strings.Trim(textToTrim, ". ")
 	fmt.Print(textToTrim, "\"\n")
 	fmt.Print(trimmedText, "\"\n")
+	WriteSpace(1)
+
+	// Testin edge cases
+	str1 := "Does not include sep"
+	sep1 := "Jeden Tag"
+	test1slice := strings.Split(str1, sep1)
+	// Should return a slice with original string str1
+	fmt.Print(test1slice)
+	WriteSpace(1)
+	fmt.Println("Length: ", len(test1slice))
+	WriteSpace(1)
+
+	str2 := "Sep is empty"
+	sep2 := ""
+	fmt.Println(str2)
+	test2slice := strings.SplitN(str2, sep2, 100)
+	for i := 0; i < len(test2slice); i++ {
+		fmt.Println(test2slice[i])
+	}
+	fmt.Println("Length: ", len(test2slice))
+	WriteSpace(1)
+
+	str3 := ""
+	sep3 := ""
+	test3slice := strings.SplitAfter(str3, sep3)
+	fmt.Println(test3slice)
+	WriteSpace(1)
+
+	// Getting a slice of all the characters in a string
+	str4 := "Aufwiedersehen"
+	fmt.Println(str4)
+	characters := strings.Split(str4, "")
+	holen := []string{
+		"h", "o", "l", "e", "n",
+	}
+	for j := 9; j < len(characters); j++ {
+		characters[j] = holen[j-9]
+	}
+	fmt.Println(characters)
+	str4Rejoined := strings.Join(characters, "")
+	fmt.Println(str4Rejoined)
+	WriteSpace(1)
 }
