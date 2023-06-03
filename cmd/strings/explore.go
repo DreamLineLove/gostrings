@@ -59,4 +59,61 @@ func explore() {
 	var first10primesAsStringsSlice = first10primesAsStrings[:10]
 	var first10primesString = strings.Join(first10primesAsStringsSlice, ", ")
 	fmt.Println(first10primesString)
+
+	// Another exaple
+	cityCode := "YGN"
+	postalCode := 10110
+	township := "Yankin"
+	var addressSlice []string
+	var cityName, postalCodeStringified string
+	var err error
+	// Invalid city code
+	cityName, err = getCityName("MDY")
+	if err != nil {
+		fmt.Println("ERROR\t", err)
+	}
+	// Correct city code
+	cityName, err = getCityName(cityCode)
+	if err != nil {
+		fmt.Println("ERROR\t", err)
+	}
+	// Invalid postal code
+	postalCodeStringified, err = verifyAndStringifyPostalCode(9000)
+	if err != nil {
+		fmt.Println("ERROR\t", err)
+	}
+	// Valid postal code
+	postalCodeStringified, err = verifyAndStringifyPostalCode(postalCode)
+	if err != nil {
+		fmt.Println("ERROR\t", err)
+	}
+	addressSlice = constructAddress(cityName, postalCodeStringified, township)
+	addressString := strings.Join(addressSlice, "-----")
+	fmt.Println(addressString)
+}
+
+func getCityName(cityCode string) (string, error) {
+	switch cityCode {
+	case "YGN":
+		return "Yangon", nil
+	default:
+		return "", fmt.Errorf("Invalid city code:", cityCode)
+	}
+}
+
+func verifyAndStringifyPostalCode(postalCode int) (string, error) {
+	if postalCode > 10000 {
+		return strconv.Itoa(postalCode), nil
+	} else {
+		return "", fmt.Errorf("Invalid postal code:", postalCode)
+	}
+}
+
+func constructAddress(cityName string, postalCode string, township string) []string {
+	requiredAddress := []string{
+		township,
+		cityName,
+		postalCode,
+	}
+	return requiredAddress
 }
