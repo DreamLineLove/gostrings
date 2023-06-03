@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func basics() {
+func basicsLEGACY() {
 
 	// This is a raw literal.
 	fmt.Println(`This should print "Hello World"`)

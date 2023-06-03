@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func stringsPkg() {
+func stringsPkgLEGACY() {
 
 	WriteSpace(2)
 	var str1 string = "First String"
