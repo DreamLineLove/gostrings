@@ -1,6 +1,7 @@
 package main
 
 func main() {
-	basics()
-	join()
+	// basics()
+	// join()
+	explore()
 }
