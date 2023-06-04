@@ -3,3 +3,4 @@
 - Maybe use the flags library for it?
 - Write a universal package with helper functions that allow you to construct the quiz in every repo. The flag might be a required argument in one of the functions. But it need not necessarily be part of the library.
 - Write a production-ready (to be consumed by other devs) version of this quiz package
+- Could be called the *CLI Quiz Maker* perhaps ;)
