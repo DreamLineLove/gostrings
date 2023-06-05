@@ -28,7 +28,8 @@ func explore() {
 	fmt.Println("url uses a known protocol:", usesKnownProtocol)
 	fmt.Println("protocol:", usedprotocol)
 
-	s1 := "Ich habe meine Hausaufgaben noch nicht gemacht"
+	s1 := " Ich habe meine Hausaufgaben noch nicht gemacht"
+	fmt.Println(s1)
 	s1_doubleWhiteSpace := strings.ReplaceAll(s1, " ", "  ")
 	s1words := strings.Fields(s1)
 	s1_double_words := strings.Fields(s1_doubleWhiteSpace)
