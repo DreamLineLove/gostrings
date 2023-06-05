@@ -46,6 +46,13 @@ func explore() {
 	}
 	WriteSpace(1)
 
+	s3 := "You are the King of Scotland. You are the law in this country. You are blessed by God."
+	s3_after_conquest := strings.ReplaceAll(s3, "You", "I")
+	s3_semifinal := strings.Replace(s3_after_conquest, "are", "am", 3) + " I am better than any Kings."
+	s3_final := strings.Replace(s3_semifinal, "King", "Queen", 1)
+	fmt.Println(s3)
+	fmt.Println(s3_semifinal)
+	fmt.Println(s3_final)
 }
 
 func weekdayGuessingGame() {
