@@ -54,6 +54,19 @@ func explore() {
 	fmt.Println(s3)
 	fmt.Println(s3_semifinal)
 	fmt.Println(s3_final)
+	WriteSpace(1)
+
+	s4 := "/users/type/admin/id/"
+	s4directories := strings.FieldsFunc(s4, func(c rune) bool {
+		return c == '/'
+	})
+	s4slice := strings.Split(s4, "/")
+	for i := 0; i < len(s4directories); i++ {
+		fmt.Println("\"" + s4directories[i] + "\"")
+	}
+	for i := 0; i < len(s4slice); i++ {
+		fmt.Println("\"" + s4slice[i] + "\"")
+	}
 }
 
 func weekdayGuessingGame() {
