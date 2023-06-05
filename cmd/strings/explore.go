@@ -29,8 +29,22 @@ func explore() {
 	fmt.Println("protocol:", usedprotocol)
 
 	s1 := "Ich habe meine Hausaufgaben noch nicht gemacht"
+	s1_doubleWhiteSpace := strings.ReplaceAll(s1, " ", "  ")
 	s1words := strings.Fields(s1)
+	s1_double_words := strings.Fields(s1_doubleWhiteSpace)
 	fmt.Println(s1words)
+	fmt.Println(s1_doubleWhiteSpace)
+	fmt.Println(s1_double_words)
+	WriteSpace(1)
+
+	s2 := "users/old/60plus/alive"
+	s2fields := strings.Fields(s2)
+	s2directories := strings.Split(s2, "/")
+	fmt.Println(s2fields)
+	for i := 0; i < len(s2directories); i++ {
+		fmt.Println(s2directories[i])
+	}
+	WriteSpace(1)
 
 }
 
