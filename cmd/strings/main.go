@@ -5,6 +5,6 @@ func main() {
 	// join()
 	// split()
 	// contains()
-	cut()
-	// explore()
+	// cut()
+	explore()
 }
