@@ -7,7 +7,7 @@ import (
 )
 
 func explore() {
-	weekdayGuessingGame()
+	// weekdayGuessingGame()
 	WriteSpace(1)
 
 	protocols := []string{
