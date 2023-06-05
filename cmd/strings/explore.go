@@ -64,9 +64,21 @@ func explore() {
 	for i := 0; i < len(s4directories); i++ {
 		fmt.Println("\"" + s4directories[i] + "\"")
 	}
+	WriteSpace(1)
 	for i := 0; i < len(s4slice); i++ {
 		fmt.Println("\"" + s4slice[i] + "\"")
 	}
+	WriteSpace(1)
+
+	s5 := "/users/type/admin/with?id=123/"
+	s5fields := strings.FieldsFunc(s5, func(c rune) bool {
+		return c == '/' || c == '?' || c == '='
+	})
+	for i := 0; i < len(s5fields); i++ {
+		fmt.Println("\"" + s5fields[i] + "\"")
+	}
+	WriteSpace(1)
+
 }
 
 func weekdayGuessingGame() {
