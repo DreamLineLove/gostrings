@@ -76,6 +76,20 @@ func contains() {
 	foundAll := containsAll(str4, searchStringsSlice)
 	fmt.Println(searchStringsSlice)
 	fmt.Print("Contains the above slice: ", foundAll)
+	WriteSpace(1)
+
+	// Looking for phrases case-insensitively
+	str5 := "WWDC 2023 Apple Reality Headset"
+	str5lowercaps := strings.ToLower(str5)
+	searchStringsSlice2 := []string{
+		"apple",
+		"wwdc",
+		"reality",
+	}
+	foundAll2 := containsAll(str5lowercaps, searchStringsSlice2)
+	fmt.Println(searchStringsSlice2)
+	fmt.Print("Contains the above slice: ", foundAll2)
+	WriteSpace(1)
 }
 
 func containsAll(operand string, slice []string) bool {
