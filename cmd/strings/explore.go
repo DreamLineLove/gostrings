@@ -8,6 +8,19 @@ import (
 
 func explore() {
 	// legacy()
+	str1 := "this is a good old interpreted raw string"
+	str2 := "should not contain at all"
+	if strings.Contains(str1, str2) {
+		fmt.Println("str1 contains str2!")
+	} else {
+		fmt.Println("str1 does not contain str2!")
+	}
+
+	str3 := "apple"
+	var a rune = 'a'
+	if strings.ContainsRune(str3, a) {
+		fmt.Println(str3, "contains", a)
+	}
 }
 
 func legacy() {
