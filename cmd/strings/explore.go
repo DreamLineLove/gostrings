@@ -27,6 +27,13 @@ func explore() {
 		fmt.Println("str1 contains any of", strings.TrimPrefix(charSet1, " "))
 	}
 
+	str4 := "the Go Standard Library!"
+	str4_noprefix := strings.TrimPrefix(str4, "the ")
+	str4_nosuffix := strings.TrimSuffix(str4, "!")
+	str4_noprefix_nosuffix := strings.TrimSuffix(str4_noprefix, "!")
+	fmt.Println()
+	fmt.Println(str4_noprefix_nosuffix)
+	fmt.Println(str4_nosuffix, "is the best standard library of any language!")
 }
 
 func legacy() {
