@@ -24,7 +24,7 @@ func explore() {
 	str3_space := str3 + " "
 	var space rune = ' '
 	if strings.ContainsRune(str3_space, space) {
-		fmt.Println("\""+str3_space+"\"", "contains a whitespace")
+		fmt.Println("\""+str3_space+"\"", "contains", space, "(unicode point number or something like that for whitespace)")
 	}
 
 	charSet1 := " oriter"
