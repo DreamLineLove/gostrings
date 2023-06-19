@@ -36,7 +36,7 @@ func explore() {
 	fmt.Println(str4_nosuffix, "is the best standard library of any language!")
 
 	fmt.Println()
-	str5 := "hello it's me"
+	str5 := "hello it's me, i've been blah blah blah..."
 	var slice1 []string
 	slice1 = strings.Fields(str5)
 	for _, value := range slice1 {
