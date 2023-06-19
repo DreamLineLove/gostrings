@@ -34,6 +34,14 @@ func explore() {
 	fmt.Println()
 	fmt.Println(str4_noprefix_nosuffix)
 	fmt.Println(str4_nosuffix, "is the best standard library of any language!")
+
+	fmt.Println()
+	str5 := "hello it's me"
+	var slice1 []string
+	slice1 = strings.Fields(str5)
+	for _, value := range slice1 {
+		fmt.Println("\t\"" + value + "\"")
+	}
 }
 
 func legacy() {
