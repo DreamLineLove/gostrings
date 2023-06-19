@@ -7,6 +7,10 @@ import (
 )
 
 func explore() {
+	// legacy()
+}
+
+func legacy() {
 	// weekdayGuessingGame()
 	WriteSpace(1)
 
