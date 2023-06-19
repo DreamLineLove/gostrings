@@ -21,6 +21,12 @@ func explore() {
 	if strings.ContainsRune(str3, a) {
 		fmt.Println(str3, "contains a")
 	}
+
+	charSet1 := " oriter"
+	if strings.ContainsAny(str1, charSet1) {
+		fmt.Println("str1 contains any of", strings.TrimPrefix(charSet1, " "))
+	}
+
 }
 
 func legacy() {
