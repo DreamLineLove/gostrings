@@ -19,7 +19,7 @@ func explore() {
 	str3 := "apple"
 	var a rune = 'a'
 	if strings.ContainsRune(str3, a) {
-		fmt.Println(str3, "contains", a)
+		fmt.Println(str3, "contains a")
 	}
 }
 
