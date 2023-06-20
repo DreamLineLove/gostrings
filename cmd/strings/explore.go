@@ -62,8 +62,8 @@ func explore() {
 
 	str6 := "LORD MALGANIS"
 	str7 := "malganis"
-	if strings.ContainsAny(strings.EqualFold(str6, str7)) {
-		fmt.Println(str6, "contains", "str7", "when the case difference is not set aside")
+	if strings.ContainsAny(strings.ToLower(str6), strings.ToLower(str7)) {
+		fmt.Println(str6, "contains", str7, "when the case difference is set aside")
 	}
 }
 
