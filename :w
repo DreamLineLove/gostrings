@@ -50,15 +50,10 @@ func explore() {
 
 	var slice2 []string
 	slice2 = strings.FieldsFunc(str5, func(r rune) bool {
-		if r == '\'' {
+		if r== ',' {
 			return true
-		} else {
-			return false
-		}
-	})
-	for index, value := range slice2 {
-		fmt.Print(index, "\t", value, "\n")
-	}
+		} else return false
+		})
 }
 
 func legacy() {
