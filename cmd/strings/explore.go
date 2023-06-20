@@ -59,6 +59,12 @@ func explore() {
 	for index, value := range slice2 {
 		fmt.Print(index, "\t", value, "\n")
 	}
+
+	str6 := "LORD MALGANIS"
+	str7 := "malganis"
+	if strings.ContainsAny(strings.EqualFold(str6, str7)) {
+		fmt.Println(str6, "contains", "str7", "when the case difference is not set aside")
+	}
 }
 
 func legacy() {
