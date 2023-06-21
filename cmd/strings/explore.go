@@ -7,7 +7,10 @@ import (
 )
 
 func explore() {
-	// legacy()
+	legacy()
+}
+
+func legacy() {
 	str1 := "this is a good old interpreted raw string"
 	str2 := "should not contain at all"
 	if strings.Contains(str1, str2) {
@@ -65,9 +68,6 @@ func explore() {
 	if strings.ContainsAny(strings.ToLower(str6), strings.ToLower(str7)) {
 		fmt.Println(str6, "contains", str7, "when the case difference is set aside")
 	}
-}
-
-func legacy() {
 	// weekdayGuessingGame()
 	WriteSpace(1)
 
