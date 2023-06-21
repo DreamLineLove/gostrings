@@ -7,7 +7,13 @@ import (
 )
 
 func explore() {
-	legacy()
+	// legacy()
+
+	str1 := "arthas"
+	str2 := "ARTHAS"
+	if strings.EqualFold(str1, str2) {
+		fmt.Println(str1, "and", str2, "are equal when case-folded")
+	}
 }
 
 func legacy() {
