@@ -40,6 +40,25 @@ func explore() {
 	fmt.Println(str5_ich_du_all)
 	fmt.Println(str5_bin_bist)
 	fmt.Println(str5_bin_bist_all)
+
+	fuji_mini40 := "FUJIFILM Instax Mini 40"
+	fuji_mini90 := "FUJIFILM Instax Mini 90"
+	var (
+		mini40 string
+		mini90 string
+	)
+	if strings.HasPrefix(strings.ToLower(fuji_mini40), "fujifilm") {
+		mini40 = strings.TrimPrefix(fuji_mini40, "FUJIFILM ")
+	}
+	if strings.HasPrefix(strings.ToUpper(fuji_mini90), "FUJIFILM") {
+		mini90 = strings.TrimPrefix(fuji_mini90, "FUJIFILM ")
+	}
+
+	fmt.Println()
+	fmt.Println(fuji_mini40)
+	fmt.Println(mini40)
+	fmt.Println(fuji_mini90)
+	fmt.Println(mini90)
 }
 
 func legacy() {
