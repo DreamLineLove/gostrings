@@ -14,6 +14,13 @@ func explore() {
 	if strings.EqualFold(str1, str2) {
 		fmt.Println(str1, "and", str2, "are equal when case-folded")
 	}
+
+	str3 := "ARTHUR"
+	if strings.EqualFold(str3, str2) {
+		fmt.Println(str3, "and", str2, "are equal when case-folded")
+	} else {
+		fmt.Println(str3, "and", str2, "are NOT equal when case-folded")
+	}
 }
 
 func legacy() {
