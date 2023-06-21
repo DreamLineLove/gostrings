@@ -21,6 +21,13 @@ func explore() {
 	} else {
 		fmt.Println(str3, "and", str2, "are NOT equal when case-folded")
 	}
+
+	str4 := "Ich lerne Programming, weil es sehr wichtig fur meine Arbeit ist"
+	str4_i_count := strings.Count(str4, "i")
+	str4_lower := strings.ToLower(str4)
+	str4_lower_i_count := strings.Count(str4_lower, "i")
+	fmt.Println("str4 contains i", str4_i_count, "times")
+	fmt.Println("str4 case-folded contains i", str4_lower_i_count, "times")
 }
 
 func legacy() {
