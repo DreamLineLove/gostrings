@@ -28,6 +28,18 @@ func explore() {
 	str4_lower_i_count := strings.Count(str4_lower, "i")
 	fmt.Println("str4 contains i", str4_i_count, "times")
 	fmt.Println("str4 case-folded contains i", str4_lower_i_count, "times")
+
+	str5 := "Ich bin 18 Jahre alt. Ich bin ledig. Ich bin Myanmar."
+	str5_ich_du := strings.Replace(str5, "Ich", "Du", 2)
+	str5_ich_du_all := strings.ReplaceAll(str5, "Ich", "Du")
+	str5_bin_bist := strings.Replace(str5_ich_du_all, "bin", "bist", 2)
+	str5_bin_bist_all := strings.ReplaceAll(str5_ich_du_all, "bin", "bist")
+	fmt.Println()
+	fmt.Println(str5)
+	fmt.Println(str5_ich_du)
+	fmt.Println(str5_ich_du_all)
+	fmt.Println(str5_bin_bist)
+	fmt.Println(str5_bin_bist_all)
 }
 
 func legacy() {
